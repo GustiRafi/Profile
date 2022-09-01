@@ -1,0 +1,16 @@
+.link-1:hover{
+    background-color: rgb(176, 221, 247);
+    color: white;
+    cursor: pointer;
+}
+
+.mt-6 {
+    margin-top: 400px;
+}
+
+@media screen and (max-width: 1281px) {
+    .mt-6 {
+        margin-top: 140px;
+    }
+}
+
