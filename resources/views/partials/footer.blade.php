@@ -36,7 +36,7 @@
                 <div class="pt-3">
                     <div class="d-flex">
                         @foreach($sosmeds as $sosmed)
-                        <a class="text-decoration-none text-white" href="{{ $sosmed->url }}">{!! $sosmed->icon
+                        <a class="text-decoration-none text-white me-3" href="{{ $sosmed->url }}">{!! $sosmed->icon
                             !!}</i></a>
                         @endforeach
                     </div>

@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.html">My Profile</a>
+    <a class="navbar-brand ps-3">My Profile</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
             class="fas fa-bars"></i></button>
@@ -12,7 +12,9 @@
         <div class="nav-item">
             <form action="/logout" class="d-inline" method="post">
                 @csrf
-                <button type="submit" onclick="return confirm('Are you sure to logout')">Logout</button>
+                <button type="submit"
+                    class="btn btn-link btn-sm text-white text-decoration-none order-1 order-lg-0 me-4 me-lg-0"
+                    onclick="return confirm('Are you sure to logout')">Logout</button>
             </form>
         </div>
     </ul>

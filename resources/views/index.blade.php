@@ -11,12 +11,10 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-    /* .jumbotron {
-        background: url(var(--img-url));
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-    } */
+    .card-hover1 :hover {
+        background-color: darkgray;
+        color: white;
+    }
     </style>
     <title>Rafi Gusti | Profile </title>
 </head>
@@ -38,7 +36,7 @@
                         </div>
                         <div class="col-md-6 justify-content-center">
                             <div class="card-body ">
-                                <h5 class="card-title">{{ $about->title }}</h5>
+                                <h1 class="card-title text-primary"><strong>{{ $about->title }}</strong></h1>
                                 <div class="card-text">
                                     {!! $about->description !!}
                                 </div>
@@ -51,17 +49,18 @@
         </section>
         <section id="skill" class="mt-5 my-4">
             <div class="text-center">
-                <h3><i class="bi bi-tools text-success"></i></h3>
                 <div data-aos="fade-right">
                     <h3 class="text-primary"><strong>Skill</strong></h3>
                 </div>
                 <div class="row row-cols-2 row-cols-lg-4 mt-3 justify-content-center">
                     @foreach($skills as $skill)
                     <div data-aos="zoom-in">
-                        <div class="col mb-3">
-                            <div class="card bg-transparent">
-                                <h1>{!! $skill->icon !!}</h1>
-                                <p>{{ $skill->name }}</p>
+                        <div class="card-hover1">
+                            <div class="col mb-3 ">
+                                <div class="card bg-transparent">
+                                    <h1>{!! $skill->icon !!}</h1>
+                                    <p>{{ $skill->name }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -75,18 +74,20 @@
                     <p class="text-success">Project</p>
                     <h3 class="text-primary"><strong>My Project</strong></h3>
                 </div>
-                <div class="row row-cols-1 row-cols-lg-3 mt-3">
+                <div class="row row-cols-1 row-cols-lg-3 mt-3 justify-content-center">
                     @foreach($projects as $project)
                     <div class="col mb-3">
-                        <a href="{{ $project->url }}" target="_blank">
-                            <div class="card" style="max-width:1348px ;">
-                                <img src="{{ asset('storage/'. $project->thumb) }}" class="card-img img-thumbnail"
-                                    alt="" srcset="">
-                                <div class="card-img-overlay bg-dark opacity-50 text-white py-5">
-                                    <h5 class="card-title">{{ $project->name }}</h5>
+                        <div data-aos="zoom-in">
+                            <a href="{{ $project->url }}" target="_blank">
+                                <div class="card" style="max-width:1348px ;">
+                                    <img src="{{ asset('storage/'. $project->thumb) }}" class="card-img img-thumbnail"
+                                        alt="" srcset="">
+                                    <div class="card-img-overlay bg-dark opacity-50 text-white py-5">
+                                        <h5 class="card-title">{{ $project->name }}</h5>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                     @endforeach
                 </div>
@@ -100,9 +101,11 @@
                 <div class="row row-cols-1 row-cols-lg-3 justify-content-center mt-3">
                     @foreach($certificates as $certificate)
                     <div class="col mb-3">
-                        <div class="card" style="max-width:400px ;">
-                            <img src="{{ asset('storage/' . $certificate->image) }}" class="card-img-top" alt=""
-                                srcset="">
+                        <div data-aos="zoom-in">
+                            <div class="card" style="max-width:400px ;">
+                                <img src="{{ asset('storage/' . $certificate->image) }}" class="card-img-top" alt=""
+                                    srcset="">
+                            </div>
                         </div>
                     </div>
                     @endforeach
