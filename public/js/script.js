@@ -5,6 +5,7 @@ function myFunction() {
     var sideBar = document.getElementById("offcanvasScrolling");
     var close = document.getElementById("cls-btn");
     var mode = document.getElementById("mode");
+    var mode2 = document.getElementById("mode2");
     if (x.classList == "bg-white text-dark") {
         x.classList.replace("bg-white", "bg-dark");
         x.classList.replace("text-dark", "text-white");
@@ -14,6 +15,7 @@ function myFunction() {
         sideBar.classList.replace("bg-white", "bg-dark");
         close.classList.replace("bg-transparent", "bg-white");
         mode.classList.replace("bi-brightness-high-fill", "bi-moon-fill");
+        mode2.classList.replace("bi-brightness-high-fill", "bi-moon-fill");
     } else if (x.classList == "bg-dark text-white") {
         x.classList.replace("bg-dark", "bg-white");
         x.classList.replace("text-white", "text-dark");
@@ -23,6 +25,7 @@ function myFunction() {
         sideBar.classList.replace("bg-dark", "bg-white");
         close.classList.replace("bg-white", "bg-transparent");
         mode.classList.replace("bi-moon-fill", "bi-brightness-high-fill");
+        mode2.classList.replace("bi-moon-fill", "bi-brightness-high-fill");
     }
 }
 
